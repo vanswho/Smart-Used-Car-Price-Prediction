@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Predicted Price</h1>
+        <h2 style="color: green;">₹{{ prediction }}</h2>
+
+        <h3 style="margin-top: 40px;">🔍 Feature Importance:</h3>
+        <img src="{{ url_for('static', filename=image_path) }}" alt="Feature Importance Graph" style="max-width: 100%; border-radius: 10px; margin-top: 15px;">
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/">
+                <button>⬅ Back to Form</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
